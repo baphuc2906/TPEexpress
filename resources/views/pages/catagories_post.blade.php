@@ -72,15 +72,19 @@
                             <h3>Latest Comments</h3>
 
                             <!-- Single Comments -->
+                            <?php $data=$comment->sortByDesc('created_at')->take(4);  ?>
+                            @foreach($data as $value)
+                            <?php $user=$member->where('id',$value['id_user'])->first(); ?>
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/29.jpg" alt="">
+                                    <img src="{{ asset('./upload/avatar').'/'.$user->avatar }}" alt="">
                                 </div>
                                 <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
+                                    <a href="#">{{ $user->name }} <span>on</span> {{ $value['noi_dung']}}</a>
+                                    <p>{{ $value['created_at'] }}</p>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

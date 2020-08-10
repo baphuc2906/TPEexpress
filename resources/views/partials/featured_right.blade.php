@@ -18,7 +18,7 @@
                 <a href="{{ url('/')."/".$catagory['ten_khong_dau']."/".$tintuc['tieu_de_khong_dau'] }}" class="post-title">
                     <h6>{{ $tintuc['tieu_de'] }}</h6>
                 </a>
-                <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
+                <p class="post-date"><span>{{ $tintuc['created_at']->format('H:i') }}</span> | <span>{{ $tintuc['created_at']->format('d M')}}</span></p>
             </div>
         </div>
     </div>

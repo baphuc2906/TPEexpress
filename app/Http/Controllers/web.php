@@ -36,9 +36,11 @@ class web extends Controller
      $loai_tin=loai_tin::all();
      $the_loai= the_loai::all();
      $tin_tuc=tin_tuc::all();
+     $comment=comment::all();
+     $member=Admin::all();
      $data=$loai_tin->where('ten_khong_dau','=', $catagories)->first();
      $data=tin_tuc::where('id_loai_tin','=', $data['id'])->orderBy('created_at', 'DESC')->paginate(4);
-     return view('pages.catagories_post',['the_loai'=>$the_loai, 'loai_tin'=>$loai_tin ,'tin_tuc'=>$tin_tuc, 'data'=>$data]);
+     return view('pages.catagories_post',['the_loai'=>$the_loai, 'loai_tin'=>$loai_tin ,'tin_tuc'=>$tin_tuc,'comment'=>$comment,'member'=>$member, 'data'=>$data]);
     }
     public function single_post($catagories , $id){
      $loai_tin=loai_tin::all();

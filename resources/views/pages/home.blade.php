@@ -29,7 +29,7 @@
                                         <!-- Post Like & Post Comment -->
                                         <div class="d-flex align-items-center">
                                             <a href="#" class="post-like"><img src="{{ asset('asset/img/core-img/like.png') }}" alt=""  > <span>392</span></a>
-                                            <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>{{ $tin1->comment->count();}}</span></a>
+                                            <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>{{ $tin1->comment->count()}}</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -42,6 +42,7 @@
                                 <div class="post-thumb">
                                     <a   href="{{ url('/')."/".$catagory['ten_khong_dau']."/".$tintuc['tieu_de_khong_dau'] }}"><img src="{{asset('upload/tintuc/')."/".$tintuc['hinh'] }}" alt=""  ></a>
                                 </div>
+
                                 <div class="post-data">
                                     <a href="#" class="post-catagory">Finance</a>
                                     <div class="post-meta">
@@ -52,7 +53,7 @@
                                         <!-- Post Like & Post Comment -->
                                         <div class="d-flex align-items-center">
                                             <a href="#" class="post-like"><img src="{{ asset('asset/img/core-img/like.png') }}" alt=""  > <span>392</span></a>
-                                            <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>10</span></a>
+                                            <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>{{ $tintuc->comment->count() }}</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +99,7 @@
                                         <div class="post-date"><a href="#">{{ $tintuc['created_at'] }}</a></div>
                                         <div class="post-meta d-flex align-items-center" style="padding-top: 10px;">
                                         <a href="#" class="post-like"><img src="{{ asset('asset/img/core-img/like.png') }}" alt=""  > <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>10</span></a>
+                                        <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>{{ $tintuc->comment->count() }}</span></a>
                                     </div>
                                     </div>
                                 </div>
