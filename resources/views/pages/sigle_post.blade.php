@@ -75,7 +75,7 @@
                             <?php $catagory= $loai_tin->where('id','=' ,$tintuc['id_loai_tin'])->first();  ?>
                             <div class="col-12 col-md-4">
                                 <div class="single-blog-post style-3 mb-80">
-                                    @include('partials.post_item',['tintuc'=>$tintuc, 'catagory'=>$catagory]);
+                                    @include('partials.post_item',['tintuc'=>$tintuc, 'catagory'=>$catagory])
                                 </div>
                             </div>
                             @endforeach

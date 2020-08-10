@@ -7,9 +7,6 @@
                     <div class="blog-posts-area">
                         <!-- Single Featured Post 25-28-->
                         <div class="row">
-                           {{--  @foreach($data->items() as $tintuc)  --}}
-                             {{--    {{ dd($data)  }} --}}
-                            {{-- @endforeach --}}
                             @foreach($data->all() as $tintuc)
                             <div class="col-12 col-lg-6">
                                 <div class="single-blog-post featured-post mb-30">

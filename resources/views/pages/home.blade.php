@@ -29,7 +29,7 @@
                                         <!-- Post Like & Post Comment -->
                                         <div class="d-flex align-items-center">
                                             <a href="#" class="post-like"><img src="{{ asset('asset/img/core-img/like.png') }}" alt=""  > <span>392</span></a>
-                                            <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>10</span></a>
+                                            <a href="#" class="post-comment"><img src="{{ asset('asset/img/core-img/chat.png') }}" alt=""  > <span>{{ $tin1->comment->count();}}</span></a>
                                         </div>
                                     </div>
                                 </div>
