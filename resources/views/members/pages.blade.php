@@ -11,10 +11,10 @@
             <div class="col-md-3">
                 <div class="profile-img">
                     <img src="{{ asset('upload/avatar/'.'/'.$member->avatar) }}" alt="" style="height: auto; width: 100%; object-fit: fill" />
-                    <div class="file btn btn-lg btn-primary">
+                   {{--  <div class="file btn btn-lg btn-primary">
                         Change Photo
                         <input type="file" name="file"/>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="profile-work">
                     <p>Thông Tin</p>
