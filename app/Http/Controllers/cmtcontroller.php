@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\the_loai;
 use App\comment;
 use App\Admin;
+use App\tin_tuc;
 
 class cmtcontroller extends Controller
 {
@@ -18,7 +19,7 @@ class cmtcontroller extends Controller
     }
     public function danhsach(){
     	$member=Admin::all();
-    	$cmt=comment::all();
+    	$cmt=comment::with('tintuc')->orderBy('created_at', 'DESC')->paginate(10);
     	return view('admin.comment.danhsach',['member'=>$member , 'comment' =>$cmt]);
     }
 }

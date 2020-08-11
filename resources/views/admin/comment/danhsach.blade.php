@@ -45,9 +45,9 @@
                           <tr>
                             <td class="text-capitalize">{{ $value->id }}</td>
                             <td class="text-capitalize">{{ $member->where('id', $value->id_user)->first()->name }} </td>
-                            <td class="text-capitalize">{{ $value->noi_dung }} </td>
+                            <td class="text-capitalize">{{ $value->noi_dung}} </td>
                             <td class="text-capitalize">{{ $value->tintuc->tieu_de }} </td>
-                            <td class="text-capitalize">{{ $value->created_at }} </td>
+                            <td class="text-capitalize">{{ $value->create_at}} </td>
                             <td class="text-center"><a href="{{ url("admin/loaitin/xoa/")."/"}}{{ $value->id }}"><button class="button btn-danger text-center">Xoá</button></a></td>
                           </tr>
                           @endforeach
@@ -55,6 +55,9 @@
                         </tbody>
                       </table>
                     </div>
+                  </div>
+                  <div class="col-lg-12 text-center">
+                   {{ $comment->links() }}
                   </div>
                 </div>
               </div>
