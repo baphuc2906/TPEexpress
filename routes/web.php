@@ -37,7 +37,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
    Route::get('/', 'HomeController@index')->name('home');
    //Route::get('/', 'HomeController@getdashborad')->name('dashbroad');
    Route::group(['prefix'=>'theloai'],function(){
-		Route::get('danhsach', 'TheLoaiController@getdanhsach');
+		Route::get('danhsach', 'TheLoaiController@getdanhsach')->name('categorylist');
    	Route::get('sua/{id}','TheLoaiController@getsua');
       Route::post('sua/{id}','TheLoaiController@postsua');
    	Route::get('them','TheLoaiController@getthem');
@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
       Route::get('xoa/{id}', 'TheLoaiController@getxoa');
    });
    Route::group(['prefix'=>'loaitin'],function(){
-   	Route::get('danhsach', 'LoaiTinController@getdanhsach');
+   	Route::get('danhsach', 'LoaiTinController@getdanhsach')->name('typelist');
    	Route::get('sua/{id}','LoaiTinController@getsua');
       Route::post('sua/{id}','LoaiTinController@postsua');
 		Route::get('them','LoaiTinController@getthem');
@@ -53,7 +53,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
       Route::get('xoa/{id}','LoaiTinController@getxoa');
    });
    Route::group(['prefix'=>'tintuc'],function(){
-		Route::get('danhsach', 'TinTucController@getdanhsach');
+		Route::get('danhsach', 'TinTucController@getdanhsach')->name('postlist');
    	Route::get('sua/{id}','TinTucController@getsua');
       Route::post('sua/{id}','TinTucController@postsua');
       Route::post('them', 'TinTucController@postthem');
@@ -61,6 +61,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
       Route::get('xoa/{id}', 'TinTucController@getxoa');
       Route::get('xoa/cmt/{id}','cmtcontroller@getxoa');
    });
+   Route::get('comment/danhsach','cmtcontroller@danhsach')->name('commentlist');
    Route::group(['prefix'=>'ajax'],function(){
       Route::get('loaitin/{idTheLoai}','AjaxController@getLoaiTin');
    });

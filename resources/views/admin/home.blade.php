@@ -20,7 +20,7 @@
                     <div>New Comments!</div>
                   </div>
                 </div>
-              </div><a href="#">
+              </div><a href="{{ route('commentlist') }}">
                 <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                   <div class="clearfix"></div>
                 </div></a>
@@ -36,7 +36,7 @@
                     <div>Thể Loại</div>
                   </div>
                 </div>
-              </div><a href="#">
+              </div><a href="{{ route('categorylist') }}">
                 <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                   <div class="clearfix"></div>
                 </div></a>
@@ -52,7 +52,7 @@
                     <div>Loại Tin</div>
                   </div>
                 </div>
-              </div><a href="#">
+              </div><a href="{{ route('typelist') }}">
                 <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                   <div class="clearfix"></div>
                 </div></a>
@@ -68,7 +68,7 @@
                     <div>Tin Tức</div>
                   </div>
                 </div>
-              </div><a href="#">
+              </div><a href="{{ route('postlist') }}">
                 <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                   <div class="clearfix"></div>
                 </div></a>

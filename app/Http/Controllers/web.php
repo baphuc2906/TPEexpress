@@ -87,11 +87,6 @@ class web extends Controller
      $member->phonenum=$request->phonenum;
      $member->profession=$request->profession;
      if($request->hasFile('avatar')){
-            
-            // $request->file("myimg")->move(
-            //  "images",
-            //  "Saved.png"
-            // );
         $file= $request->file("avatar");
         if($file->getClientOriginalExtension("avatar")=="jpg" || $file->getClientOriginalExtension("avatar")=="png")
         {
