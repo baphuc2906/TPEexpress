@@ -31,8 +31,8 @@
                     <label for="">Tên hình ảnh :</label>
                     <img src="{{ asset('upload/avatar/')."/".$member->avatar }}" alt="" style="height:150px; width: 150px; display: block;" >
                     <input type="file" name="avatar" value="{{ $member->avatar }}" /><br>
-              			<label for="" class="mt-3" style="margin-top: 20px;">Nghề nghiệp :</label>
-              			<input type="text" class="form-control" name="profession" placeholder="Nhập nghề ngiệp" value="{{ $member->profession }}" />
+              		<label for="" class="mt-3" style="margin-top: 20px;">Nghề nghiệp :</label>
+              		<input type="text" class="form-control" name="profession" placeholder="Nhập nghề ngiệp" value="{{ $member->profession }}" />
                     <label for="" class="mt-3" style="margin-top: 20px;">Số điện thoại :</label>
                     <input type="text" class="form-control" name="phonenum" placeholder="Nhập số điện thoại" value="{{ $member->phonenum }}" />
         		</div>

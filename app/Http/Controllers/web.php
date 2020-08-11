@@ -95,7 +95,7 @@ class web extends Controller
         $file= $request->file("avatar");
         if($file->getClientOriginalExtension("avatar")=="jpg" || $file->getClientOriginalExtension("avatar")=="png")
         {
-            $filename= $file->getClientOriginalName("myimg");
+            $filename= $file->getClientOriginalName("avatar");
             $Img= Str::random(4)."_".$filename;
             while (file_exists("upload/avatar/".$Img)){
                 $Img= Str::random(4)."_".$filename;
